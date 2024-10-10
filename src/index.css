@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+/*  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply min-h-screen bg-pink-300;
-}
-
-@layer components {
-  .btnDishe {
-    @apply border-2 border-pink-300 border-solid rounded-lg;
+@layer base {
+  body {
+    @apply min-h-screen bg-rose-50;
+    font-family: 'Red Hat Text', sans-serif;
   }
 }

@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     image: {
       thumbnail: './src/assets/images/image-waffle-thumbnail.jpg',
@@ -99,3 +99,5 @@ export const data = [
     price: 6.5,
   },
 ];
+
+export default data;
