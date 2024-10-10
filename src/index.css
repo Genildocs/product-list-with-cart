@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-h-screen bg-pink-300;
+}
+
+@layer components {
+  .btnDishe {
+    @apply border-2 border-pink-300 border-solid rounded-lg;
+  }
+}
