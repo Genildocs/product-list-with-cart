@@ -3,7 +3,7 @@ import Cart from '../assets/images/icon-add-to-cart.svg';
 import Decrement from '../assets/images/icon-decrement-quantity.svg';
 import Increment from '../assets/images/icon-increment-quantity.svg';
 
-export default function ButtonCount({ count, setCount }) {
+export default function ButtonCount({ count, setCount, dish, index }) {
   const [addCount, setAddCount] = useState(true);
 
   const handleIncrement = () => {
@@ -13,6 +13,10 @@ export default function ButtonCount({ count, setCount }) {
   const handleDecrement = () => {
     if (count > 0) {
       setCount(count - 1);
+    }
+
+    if (count < 2) {
+      setAddCount(true);
     }
   };
 
