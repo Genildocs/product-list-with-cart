@@ -35,7 +35,9 @@ export default function ButtonCount({ count, setCount, dish, index }) {
         </button>
       ) : (
         <div className="flex items-center bg-red-600 font-semibold px-5 py-2  gap-5 rounded-2xl">
-          <button onClick={handleDecrement}>
+          <button
+            onClick={handleDecrement}
+            className=" h-5 w-5 border-[1px] border-solid rounded-full p-1 opacity-100">
             <img
               src={Decrement}
               alt="button decrement"
@@ -43,7 +45,9 @@ export default function ButtonCount({ count, setCount, dish, index }) {
             />
           </button>
           <span className="text-white">{count}</span>
-          <button onClick={handleIncrement}>
+          <button
+            onClick={handleIncrement}
+            className=" h-5 w-5 border-[1px] border-solid rounded-full p-1 opacity-100">
             <img
               src={Increment}
               alt="button increment"
