@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Cart from '../assets/images/icon-add-to-cart.svg';
-import { data } from 'autoprefixer';
-export default function ButtonCount({ dish, index, count, setCount }) {
+import Decrement from '../assets/images/icon-decrement-quantity.svg';
+import Increment from '../assets/images/icon-increment-quantity.svg';
+
+export default function ButtonCount({ count, setCount }) {
   const [addCount, setAddCount] = useState(true);
 
   const handleIncrement = () => {
     setCount(count + 1);
-    console.log(index, count);
   };
 
   const handleDecrement = () => {
@@ -29,10 +30,22 @@ export default function ButtonCount({ dish, index, count, setCount }) {
           Add Cart
         </button>
       ) : (
-        <div className="flex items-center bg-white font-semibold px-5 py-2  gap-2 rounded-2xl">
-          <button onClick={handleDecrement}>DECREMENTAR</button>
-          <p>{count}</p>
-          <button onClick={handleIncrement}>INCREMENTAR</button>
+        <div className="flex items-center bg-red-600 font-semibold px-5 py-2  gap-5 rounded-2xl">
+          <button onClick={handleDecrement}>
+            <img
+              src={Decrement}
+              alt="button decrement"
+              className="cursor-pointer"
+            />
+          </button>
+          <span className="text-white">{count}</span>
+          <button onClick={handleIncrement}>
+            <img
+              src={Increment}
+              alt="button increment"
+              className="cursor-pointer"
+            />
+          </button>
         </div>
       )}
     </div>
