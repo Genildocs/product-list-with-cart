@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from '../../data';
 import ButtonCount from './ButtonCount';
 
@@ -19,13 +19,6 @@ export default function Cards({ count, setCount }) {
           {data.map((dish, index) => (
             <div id={`dish-${index}`} key={dish.name}>
               <div>
-                <img
-                  src={dish.image.mobile}
-                  alt={dish.name}
-                  className="object-cover rounded-md cursor-pointer"
-                />
-              </div>
-              <div className=" -translate-y-3">
                 <ButtonCount
                   count={count[index]}
                   setCount={(newCount) => updateCount(index, newCount)}

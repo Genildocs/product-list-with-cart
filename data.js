@@ -89,10 +89,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: './src/assets/images/image-panna-cotta-thumbnail.jpg',
-      mobile: './src/assets/images/image-panna-cotta-mobile.jpg',
-      tablet: './src/assets/images/image-panna-cotta-tablet.jpg',
-      desktop: './src/assets/images/image-panna-cotta-desktop.jpg',
+      thumbnail: '/src/assets/images/image-panna-cotta-thumbnail.jpg',
+      mobile: '/src/assets/images/image-panna-cotta-mobile.jpg',
+      tablet: '/src/assets/images/image-panna-cotta-tablet.jpg',
+      desktop: 'src/assets/images/image-panna-cotta-desktop.jpg',
     },
     name: 'Vanilla Panna Cotta',
     category: 'Panna Cotta',

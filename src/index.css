@@ -9,6 +9,11 @@
   body {
     @apply min-h-screen bg-rose-50 relative;
     font-family: 'Red Hat Text', sans-serif;
+    background-image: linear-gradient(
+      to bottom,
+      hsl(52, 94%, 94%),
+      hsl(32, 65%, 62%, 0.7)
+    );
   }
 
   .overlay {
@@ -16,8 +21,13 @@
     transition: all 0.3s ease-in-out;
   }
 
-  .modal-cart {
+  .close-cart {
     visibility: hidden;
     opacity: 0;
+  }
+
+  .open-cart {
+    visibility: visible;
+    opacity: 1;
   }
 }

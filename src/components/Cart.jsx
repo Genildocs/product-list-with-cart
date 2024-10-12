@@ -1,6 +1,11 @@
 import Cookie from '../assets/images/illustration-empty-cart.svg';
 import ItemsCart from './ItemsCart';
-export default function Cart({ count, setCount }) {
+export default function Cart({
+  count,
+  setCount,
+  confirmOrder,
+  setConfirmOrder,
+}) {
   const sumCount = count.reduce((acc, cur) => acc + cur, 0);
 
   // const handleModalCart = () => {
@@ -18,7 +23,9 @@ export default function Cart({ count, setCount }) {
             This is a <span className="font-bold"> carbon-neutral </span>{' '}
             delivery
           </p>
-          <button className="w-full bg-red-500 rounded-2xl text-white py-2">
+          <button
+            className="w-full bg-red-500 rounded-2xl text-white py-2"
+            onClick={() => setConfirmOrder(!confirmOrder)}>
             Confirm Order
           </button>
         </div>
